@@ -1,33 +1,35 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
+    const { t } = useTranslation();
     const [openIdx, setOpenIdx] = useState(0);
 
     const questions = [
         {
-            q: "Compatible Meta et TikTok ?",
-            a: "Oui, RiseManager s'intègre parfaitement avec Meta Ads et TikTok Ads via API officielles. Vous pouvez piloter vos deux comptes depuis un seul dashboard."
+            q: t('faq_q1'),
+            a: t('faq_a1')
         },
         {
-            q: "Peut-on suivre plusieurs comptes pub ?",
-            a: "Absolument. Selon votre plan, vous pouvez connecter plusieurs comptes publicitaires et analyser la data de façon globale ou individuelle."
+            q: t('faq_q2'),
+            a: t('faq_a2')
         },
         {
-            q: "Données mises à jour en temps réel ?",
-            a: "Oui, nous synchronisons vos données de ventes, de livraisons et de coûts publicitaires toutes les 5 minutes pour des décisions en direct."
+            q: t('faq_q3'),
+            a: t('faq_a3')
         },
         {
-            q: "Compatible COD ?",
-            a: "RiseManager a été pensé prioritairement pour le Cash On Delivery. Il intègre le taux de confirmation, le taux de livraison et les retours pour calculer votre vrai bénéfice."
+            q: t('faq_q4'),
+            a: t('faq_a4')
         },
         {
-            q: "Multi boutiques ?",
-            a: "Oui, le plan Empire Ads vous permet de connecter et de gérer plusieurs boutiques Shopify ou WooCommerce simultanément."
+            q: t('faq_q5'),
+            a: t('faq_a5')
         },
         {
-            q: "Export rapports ?",
-            a: "Vous pouvez exporter tous vos rapports en CSV, PDF, ou les envoyer automatiquement par e-mail à votre équipe ou vos clients."
+            q: t('faq_q6'),
+            a: t('faq_a6')
         }
     ];
 
@@ -36,7 +38,7 @@ const FAQ = () => {
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
-                        Questions fréquentes
+                        {t('faq_title')}
                     </h2>
                 </div>
 

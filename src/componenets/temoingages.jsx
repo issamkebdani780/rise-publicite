@@ -1,22 +1,24 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+    const { t } = useTranslation();
     const reviews = [
         {
-            text: "On pensait qu'une campagne cartonnait. Elle nous faisait perdre.",
+            text: t('testi_1'),
             author: "Amine. M",
-            role: "E-commerçant COD"
+            role: t('testi_1_role')
         },
         {
-            text: "Après 14 jours : bénéfice pub +38%.",
+            text: t('testi_2'),
             author: "Sarah L.",
-            role: "CEO Marque Cosmétique"
+            role: t('testi_2_role')
         },
         {
-            text: "Mon media buyer travaille enfin avec de vraies données.",
+            text: t('testi_3'),
             author: "Younes R.",
-            role: "Propriétaire Agence E-com"
+            role: t('testi_3_role')
         }
     ];
 

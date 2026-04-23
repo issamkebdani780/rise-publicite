@@ -8,23 +8,23 @@ const Tarifs = () => {
     const plans = [
         {
             name: "Starter Ads",
-            desc: "petits budgets",
+            desc: t('tarifs_st_desc'),
             price: "4 900",
-            features: ["1 compte pub", "Dashboard basique", "Suivi ROAS brut", "Support email"],
+            features: [t('tarifs_f_st_1'), t('tarifs_f_st_2'), t('tarifs_f_st_3'), t('tarifs_f_st_4')],
             highlighted: false
         },
         {
             name: "Growth Ads",
-            desc: "scaling sellers (recommandé)",
+            desc: t('tarifs_gr_desc'),
             price: "12 900",
-            features: ["3 comptes pub", "Dashboard avancé COD", "Suivi bénéfice net", "Support prioritaire 24/7", "Analyse créative"],
+            features: [t('tarifs_f_gr_1'), t('tarifs_f_gr_2'), t('tarifs_f_gr_3'), t('tarifs_f_gr_4'), t('tarifs_f_gr_5')],
             highlighted: true
         },
         {
             name: "Empire Ads",
-            desc: "multi comptes / multi marques",
+            desc: t('tarifs_em_desc'),
             price: "29 900",
-            features: ["Comptes illimités", "Marque blanche", "API personnalisée", "Account manager dédié", "Export automatique"],
+            features: [t('tarifs_f_em_1'), t('tarifs_f_em_2'), t('tarifs_f_em_3'), t('tarifs_f_em_4'), t('tarifs_f_em_5')],
             highlighted: false
         }
     ];
@@ -36,7 +36,7 @@ const Tarifs = () => {
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
-                        Des tarifs simples pour scale
+                        {t('tarifs_title')}
                     </h2>
                 </div>
 
@@ -52,7 +52,7 @@ const Tarifs = () => {
                         >
                             {plan.highlighted && (
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded-full">
-                                    Recommandé
+                                    {t('tarifs_rec')}
                                 </div>
                             )}
                             
@@ -67,9 +67,9 @@ const Tarifs = () => {
                             
                             <div className="text-center mb-8">
                                 <span className={`text-4xl font-black ${plan.highlighted ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
-                                    {plan.price}
+                                    <span dir="ltr">{plan.price}</span>
                                 </span>
-                                <span className={`text-sm ${plan.highlighted ? 'text-slate-400' : 'text-slate-500'}`}> DA/mois</span>
+                                <span className={`text-sm ${plan.highlighted ? 'text-slate-400' : 'text-slate-500'}`}> {t('tarifs_month')}</span>
                             </div>
 
                             <ul className="space-y-4 mb-8">
@@ -92,7 +92,7 @@ const Tarifs = () => {
                                 ? 'bg-primary hover:bg-primary-hover text-white shadow-lg shadow-primary/25' 
                                 : 'bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700'
                             }`}>
-                                Commencer
+                                {t('tarifs_cta')}
                             </button>
                         </div>
                     ))}

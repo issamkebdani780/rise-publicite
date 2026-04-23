@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { AlertTriangle, UserMinus, RotateCcw, EyeOff, Shuffle,CheckCircle2  } from 'lucide-react';
+import { AlertTriangle, UserMinus, RotateCcw, EyeOff, Shuffle, CheckCircle2 } from 'lucide-react';
 
 const Douleur = () => {
     const { t } = useTranslation();
@@ -9,7 +9,7 @@ const Douleur = () => {
         <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20 relative overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div className="flex flex-col gap-16 items-center">
-                    
+
                     {/* Top: Text Content */}
                     <div className="space-y-8 animate-slide-up max-w-4xl mx-auto text-center flex flex-col items-center">
                         {/* <div className="flex justify-center items-center gap-4">
@@ -21,7 +21,7 @@ const Douleur = () => {
                                 100% Data Vérifiée
                             </div>
                         </div> */}
-                        
+
                         <div>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight tracking-tight">
                                 {t('douleur_title')}
@@ -55,14 +55,14 @@ const Douleur = () => {
                     <div className="relative animate-slide-up w-full max-w-5xl mx-auto" style={{ animationDelay: '0.2s' }}>
                         {/* Decorative glow */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 dark:bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-                        
+
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-2xl shadow-slate-200/50 dark:shadow-none p-6 sm:p-8 relative z-10">
-                            
+
                             <div className="flex justify-between items-center mb-8">
                                 <div className="text-[10px] font-bold text-slate-900 dark:text-white uppercase tracking-widest">{t('douleur_dash_title')}</div>
                                 <div className="text-[10px] font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-white/5">{t('douleur_dash_time')}</div>
                             </div>
-                            
+
                             {/* KPI Cards */}
                             <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-10">
                                 <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-100 dark:border-white/5">
@@ -87,7 +87,7 @@ const Douleur = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Chart & Top Products */}
                             <div className="flex flex-col md:flex-row gap-8 sm:gap-12">
                                 {/* Line Chart */}
@@ -97,16 +97,16 @@ const Douleur = () => {
                                         <svg viewBox="0 0 400 100" className="w-full h-full drop-shadow-md overflow-visible" preserveAspectRatio="none">
                                             <defs>
                                                 <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
-                                                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2"/>
-                                                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0"/>
+                                                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
+                                                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
                                                 </linearGradient>
                                             </defs>
-                                            <path d="M0,80 L40,75 L80,85 L120,60 L160,65 L200,45 L240,50 L280,30 L320,40 L360,20 L400,25 L400,100 L0,100 Z" fill="url(#chartGradient)"/>
-                                            <path d="M0,80 L40,75 L80,85 L120,60 L160,65 L200,45 L240,50 L280,30 L320,40 L360,20 L400,25" fill="none" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M0,80 L40,75 L80,85 L120,60 L160,65 L200,45 L240,50 L280,30 L320,40 L360,20 L400,25 L400,100 L0,100 Z" fill="url(#chartGradient)" />
+                                            <path d="M0,80 L40,75 L80,85 L120,60 L160,65 L200,45 L240,50 L280,30 L320,40 L360,20 L400,25" fill="none" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
                                 </div>
-                                
+
                                 {/* Progress Bars */}
                                 <div className="w-full md:w-2/5 flex flex-col justify-between">
                                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">{t('douleur_dash_products')}</div>
@@ -122,7 +122,7 @@ const Douleur = () => {
                                                     <span className="text-blue-500">{p.val}</span>
                                                 </div>
                                                 <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                                                    <div className="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out" style={{width: p.val}}></div>
+                                                    <div className="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out" style={{ width: p.val }}></div>
                                                 </div>
                                             </div>
                                         ))}

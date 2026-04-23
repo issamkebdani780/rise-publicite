@@ -1,7 +1,9 @@
 import React from 'react';
 import { Network, BarChart, ShoppingCart, MessageCircle, Smartphone, Share2, TrendingUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Integrations = () => {
+    const { t } = useTranslation();
     const nodes = [
         { id: 1, name: "Meta Ads", icon: <Share2 className="w-5 h-5" />, x: "20%", y: "20%", color: "text-blue-600", bg: "bg-blue-600/10" },
         { id: 2, name: "TikTok Ads", icon: <Smartphone className="w-5 h-5" />, x: "80%", y: "25%", color: "text-slate-900 dark:text-white", bg: "bg-slate-200 dark:bg-slate-800" },
@@ -27,13 +29,13 @@ const Integrations = () => {
                 <div className="text-center mb-16 animate-slide-up">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 border border-primary/20">
                         <Network className="w-4 h-4" />
-                        Écosystème Connecté
+                        {t('int_badge')}
                     </div>
                     <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
-                        Votre hub de vérité absolu
+                        {t('int_title')}
                     </h2>
                     <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
-                        Connectez toutes vos sources de données. Nous aspirons, croisons et analysons tout en temps réel.
+                        {t('int_sub')}
                     </p>
                 </div>
 

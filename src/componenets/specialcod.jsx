@@ -1,7 +1,9 @@
 import React from 'react';
 import { PhoneCall, Truck, RefreshCcw, DollarSign } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const SpecialCOD = () => {
+    const { t } = useTranslation();
     return (
         <section className="py-24 bg-slate-50/50 dark:bg-slate-950 relative">
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -9,11 +11,11 @@ const SpecialCOD = () => {
                 {/* Header */}
                 <div className="text-center mb-16 animate-slide-up max-w-2xl mx-auto">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
-                        Pensé pour le vrai e-commerce COD
+                        {t('cod_title')}
                     </h2>
                     <div className="inline-block bg-white dark:bg-slate-900 py-3 px-6 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm">
                         <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-medium">
-                            Ne mesure pas seulement les clics. <span className="font-black text-primary">Mesure :</span>
+                            {t('cod_sub')} <span className="font-black text-primary">{t('cod_measure')}</span>
                         </p>
                     </div>
                 </div>
@@ -28,10 +30,10 @@ const SpecialCOD = () => {
                                 <PhoneCall className="w-7 h-7 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3">
-                                Confirmation
+                                {t('cod_1_title')}
                             </h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium">
-                                Suivez le taux exact de confirmation par produit, par campagne et par agent en temps réel.
+                                {t('cod_1_desc')}
                             </p>
                         </div>
                         {/* Decorative background element */}
@@ -47,10 +49,10 @@ const SpecialCOD = () => {
                                 <Truck className="w-7 h-7 text-emerald-500" />
                             </div>
                             <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-3">
-                                Livraison
+                                {t('cod_2_title')}
                             </h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium mb-12">
-                                Identifiez les wilayas les plus rentables et repérez les blocages de livraison instantanément.
+                                {t('cod_2_desc')}
                             </p>
                         </div>
                         {/* Decorative background element */}
@@ -65,10 +67,10 @@ const SpecialCOD = () => {
                             <RefreshCcw className="w-6 h-6 text-orange-500" />
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2">
-                            Retour
+                            {t('cod_3_title')}
                         </h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 font-medium relative z-10">
-                            Coupez les publicités qui génèrent des faux numéros ou trop de retours.
+                            {t('cod_3_desc')}
                         </p>
                         <div className="absolute -right-4 -bottom-10 text-[120px] font-black text-orange-500/5 dark:text-orange-500/10 select-none pointer-events-none">
                             3
@@ -81,10 +83,10 @@ const SpecialCOD = () => {
                             <DollarSign className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-2xl font-black text-white mb-2 relative z-10">
-                            Bénéfice final
+                            {t('cod_4_title')}
                         </h3>
                         <p className="text-sm text-white/80 font-medium relative z-10">
-                            Votre vrai profit calculé automatiquement (Ads + Produit + Livraison).
+                            {t('cod_4_desc')}
                         </p>
                         {/* Glow and decoration */}
                         <div className="absolute right-0 bottom-0 w-32 h-32 bg-white/20 rounded-full blur-2xl pointer-events-none group-hover:bg-white/30 transition-colors duration-500" />
