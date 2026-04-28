@@ -8,12 +8,13 @@ const Hero = () => {
     return (
         <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-[#020617] transition-colors duration-500 min-h-screen flex items-center">
             {/* Background Effects */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50 dark:opacity-20 animate-pulse-slow" />
-            <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-400/10 dark:bg-blue-400/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-primary/10 dark:bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-blue-400/10 dark:bg-blue-400/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-                    
+
                     {/* Text Content */}
                     <div className="max-w-2xl text-center lg:text-left rtl:lg:text-right mx-auto lg:mx-0 animate-slide-up">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-8">
@@ -27,7 +28,7 @@ const Hero = () => {
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] mb-6 tracking-tight">
                             {t('hero_h1')}
                         </h1>
-                        
+
                         <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium">
                             {t('hero_sub')}
                         </p>
@@ -42,7 +43,7 @@ const Hero = () => {
                                 {t('hero_cta2')}
                             </a>
                         </div>
-                        
+
                         <div className="mt-8 flex items-center gap-4 justify-center lg:justify-start text-xs font-bold text-slate-500">
                             <div className="flex items-center gap-1.5">
                                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -58,7 +59,7 @@ const Hero = () => {
                     {/* Dashboard Visual */}
                     <div className="relative mx-auto w-full max-w-lg lg:max-w-none animate-slide-up" style={{ animationDelay: '0.2s' }}>
                         <div className="relative rounded-3xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl p-4 shadow-2xl shadow-slate-200/50 dark:shadow-none overflow-hidden group animate-float">
-                            
+
                             {/* Glow behind dashboard */}
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -103,7 +104,7 @@ const Hero = () => {
                                     </div>
                                     <div className="text-xs font-black text-emerald-500"><span dir="ltr">ROAS 4.7</span></div>
                                 </div>
-                                
+
                                 <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5">
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
@@ -124,7 +125,7 @@ const Hero = () => {
                             </div>
 
                         </div>
-                        
+
                         {/* Floating Card 1: Commandes (Top Left) */}
                         <div className="hidden lg:flex absolute -top-8 -left-16 z-20 bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-2xl shadow-slate-200/40 dark:shadow-none border border-slate-100 dark:border-white/5 items-center gap-4 animate-float" style={{ animationDelay: '0.4s' }}>
                             <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center">

@@ -86,16 +86,15 @@ const Dashboard = () => {
 
                 <div className="bg-white dark:bg-[#0f172a] rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden animate-slide-up" style={{ animationDelay: '0.2s' }}>
                     {/* Tabs Header */}
-                    <div className="flex overflow-x-auto justify-center no-scrollbar border-b border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-slate-900/50 p-2 gap-2">
+                    <div className="pl-20 flex overflow-x-auto justify-center no-scrollbar border-b border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-slate-900/50 p-2  gap-2">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all whitespace-nowrap ${
-                                    activeTab === tab.id 
-                                        ? 'bg-white dark:bg-slate-800 text-primary shadow-sm border border-slate-200 dark:border-white/5' 
+                                className={`flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all whitespace-nowrap ${activeTab === tab.id
+                                        ? 'bg-white dark:bg-slate-800 text-primary shadow-sm border border-slate-200 dark:border-white/5'
                                         : 'text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-                                }`}
+                                    }`}
                             >
                                 {tab.icon}
                                 {tab.label}
@@ -106,7 +105,7 @@ const Dashboard = () => {
                     {/* Tab Content Mockup */}
                     <div className="p-6 sm:p-10 min-h-[500px] flex items-center justify-center bg-slate-50/50 dark:bg-slate-950/50 relative">
                         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
-                        
+
                         <div className="w-full space-y-6 relative z-10 animate-slide-up" key={activeTab}>
                             <div className="flex justify-between items-end mb-8">
                                 <div className="text-left">
@@ -122,7 +121,7 @@ const Dashboard = () => {
                                     En direct
                                 </div>
                             </div>
-                            
+
                             <div className="grid md:grid-cols-3 gap-6">
                                 {/* Main Chart Area */}
                                 <div className="md:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-white/5 p-6 shadow-sm flex flex-col h-full">
@@ -130,8 +129,8 @@ const Dashboard = () => {
                                         <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Évolution ROAS vs CPA</div>
                                         <div className="text-xs font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Derniers 7 jours</div>
                                     </div>
-                                    
-                                    <div className="flex-1 flex flex-col justify-end h-56 mt-6 relative">
+
+                                    <div className="mt-6 relative" style={{ height: '224px' }}>
                                         {/* Grid lines */}
                                         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-50">
                                             {[1, 2, 3, 4].map((_, i) => (
@@ -139,10 +138,10 @@ const Dashboard = () => {
                                             ))}
                                         </div>
 
-                                        <div className="flex-1 flex items-end gap-3 sm:gap-6 w-full px-2 relative z-10">
+                                        <div className="flex items-end gap-3 sm:gap-6 w-full px-2 relative z-10 h-full">
                                             {tabData[activeTab].chart.map((height, i) => (
-                                                <div key={i} className="flex-1 h-full flex flex-col justify-end group relative cursor-pointer">
-                                                    
+                                                <div key={i} className="flex-1 flex flex-col justify-end group relative cursor-pointer" style={{ height: '100%' }}>
+
                                                     {/* Hover Tooltip */}
                                                     <div className="absolute -top-14 left-1/2 -translate-x-1/2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-black px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-y-2 pointer-events-none z-20 shadow-xl whitespace-nowrap">
                                                         ROAS {(height / 20).toFixed(1)}
@@ -150,16 +149,16 @@ const Dashboard = () => {
                                                     </div>
 
                                                     {/* The Bar */}
-                                                    <div 
+                                                    <div
                                                         className="w-full relative transition-all duration-700 ease-out group-hover:scale-y-[1.05] origin-bottom"
                                                         style={{ height: `${height}%` }}
                                                     >
                                                         {/* Glow effect on hover */}
                                                         <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-40 blur-lg transition-opacity duration-300" />
-                                                        
+
                                                         {/* Main Bar Gradient */}
                                                         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/60 to-primary rounded-t-xl border-t border-x border-primary/50 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]" />
-                                                        
+
                                                     </div>
                                                 </div>
                                             ))}
@@ -173,13 +172,13 @@ const Dashboard = () => {
                                 {/* Top Performers List */}
                                 <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-white/5 p-6 shadow-sm">
                                     <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">Top {tabs[activeTab].label}</div>
-                                    
+
                                     <div className="space-y-4">
                                         {tabData[activeTab].top.map((item, i) => (
                                             <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 hover:border-primary/30 transition-colors">
                                                 <div className="flex items-center gap-3">
                                                     <div className={`w-8 h-8 rounded-lg ${item.bg} flex items-center justify-center ${item.color} font-black text-xs`}>
-                                                        #{i+1}
+                                                        #{i + 1}
                                                     </div>
                                                     <div className="text-xs font-bold text-slate-900 dark:text-white truncate max-w-[100px] sm:max-w-[120px]">{item.name}</div>
                                                 </div>
