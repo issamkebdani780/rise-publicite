@@ -74,7 +74,7 @@ const Dashboard = () => {
 
     return (
         <section id="profit" className="py-24 bg-slate-50 dark:bg-slate-950">
-            <div className="container mx-auto px-4 max-w-6xl">
+            <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
                 <div className="text-center mb-12 animate-slide-up">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary mb-6">
                         <LayoutDashboard className="w-6 h-6" />
@@ -86,12 +86,12 @@ const Dashboard = () => {
 
                 <div className="bg-white dark:bg-[#0f172a] rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden animate-slide-up" style={{ animationDelay: '0.2s' }}>
                     {/* Tabs Header */}
-                    <div className="pl-20 flex overflow-x-auto justify-center no-scrollbar border-b border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-slate-900/50 p-2  gap-2">
+                    <div className="flex overflow-x-auto no-scrollbar border-b border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-slate-900/50 px-3 sm:px-6 py-2 gap-1.5 sm:gap-2 sm:justify-center">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all whitespace-nowrap ${activeTab === tab.id
+                                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${activeTab === tab.id
                                         ? 'bg-white dark:bg-slate-800 text-primary shadow-sm border border-slate-200 dark:border-white/5'
                                         : 'text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                                     }`}
@@ -103,7 +103,7 @@ const Dashboard = () => {
                     </div>
 
                     {/* Tab Content Mockup */}
-                    <div className="p-6 sm:p-10 min-h-[500px] flex items-center justify-center bg-slate-50/50 dark:bg-slate-950/50 relative">
+                    <div className="p-4 sm:p-6 md:p-10 min-h-[500px] flex items-center justify-center bg-slate-50/50 dark:bg-slate-950/50 relative">
                         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
 
                         <div className="w-full space-y-6 relative z-10 animate-slide-up" key={activeTab}>

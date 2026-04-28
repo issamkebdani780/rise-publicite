@@ -24,11 +24,11 @@ const LeadForm = () => {
     };
 
     return (
-        <section id="demo" className="py-24 bg-white dark:bg-[#020617] relative overflow-hidden">
+        <section id="demo" className="py-16 sm:py-24 bg-white dark:bg-[#020617] relative overflow-hidden">
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
             
-            <div className="container mx-auto px-4 max-w-5xl relative z-10">
-                <div className="bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-[2rem] shadow-2xl p-8 md:p-12 backdrop-blur-xl">
+            <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
+                <div className="bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-[2rem] shadow-2xl p-5 sm:p-8 md:p-12 backdrop-blur-xl">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         
                         <div className="space-y-6">
@@ -51,11 +51,11 @@ const LeadForm = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white dark:bg-slate-950 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-white/10 shadow-lg relative">
+                        <div className="bg-white dark:bg-slate-950 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-200 dark:border-white/10 shadow-lg relative">
                             <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full blur-2xl opacity-20 animate-pulse" />
                             
                             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
                                         <label className="text-xs font-bold text-slate-500 uppercase">{t('form_lbl_nom')}</label>
                                         <input type="text" name="nom" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" onChange={handleChange} />
@@ -66,7 +66,7 @@ const LeadForm = () => {
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
                                         <label className="text-xs font-bold text-slate-500 uppercase">{t('form_lbl_pays')}</label>
                                         <input type="text" name="pays" required className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" onChange={handleChange} />
@@ -85,13 +85,13 @@ const LeadForm = () => {
 
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-bold text-slate-500 uppercase">{t('form_lbl_plat')}</label>
-                                    <div className="grid grid-cols-3 gap-2">
+                                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
                                         {[{id: 'Meta', label: 'Meta'}, {id: 'TikTok', label: 'TikTok'}, {id: 'Les deux', label: t('form_plat_both')}].map(plat => (
                                             <button 
                                                 type="button" 
                                                 key={plat.id}
                                                 onClick={() => setFormData({...formData, plateforme: plat.id})}
-                                                className={`py-2 text-xs font-bold rounded-lg border transition-all ${
+                                                className={`py-2.5 sm:py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg border transition-all ${
                                                     formData.plateforme === plat.id 
                                                     ? 'bg-primary/10 border-primary text-primary' 
                                                     : 'bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-white/10 text-slate-500 hover:border-slate-300 dark:hover:border-white/20'
