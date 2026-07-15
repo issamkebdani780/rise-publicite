@@ -134,5 +134,17 @@
   "faq_a5": "Yes, the Empire Ads plan allows you to connect and manage multiple Shopify or WooCommerce stores simultaneously.",
   "faq_q6": "Export reports?",
   "faq_a6": "You can export all your reports to CSV, PDF, or have them sent automatically via email to your team or clients.",
-  "footer_tag": "The #1 Operating System"
+  "footer_tag": "The #1 Operating System",
+  "footer_signal_1": "Native Integrations",
+  "footer_signal_2": "Local Support (DZ)",
+  "footer_signal_3": "Secure Data",
+  "footer_signal_4": "Serious Infrastructure",
+  "dec_badge_actions": "Immediate Actions",
+  "dec_subtitle": "No more guesswork. Data is clear, actions to be taken become obvious. Optimize your budget in a few clicks.",
+  "footer_powered_by": "Powered by",
+  "footer_legal": "Legal Notice",
+  "footer_privacy": "Privacy Policy",
+  "footer_cgv": "T&C",
+  "Support_footer": "Support",
+  "Email": "Email"
 }

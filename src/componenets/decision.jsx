@@ -19,13 +19,13 @@ const Decisions = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="md:w-1/2 space-y-6 animate-slide-up">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold">
-                            <Zap className="w-4 h-4 fill-current" /> Actions Immédiates
+                            <Zap className="w-4 h-4 fill-current" /> {t('dec_badge_actions')}
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
                             {t('dec_title')}
                         </h2>
                         <p className="text-lg text-slate-500 font-medium">
-                            Plus de devinettes. Les données sont claires, les actions à entreprendre deviennent évidentes. Optimisez votre budget en quelques clics.
+                            {t('dec_subtitle')}
                         </p>
                     </div>
 
